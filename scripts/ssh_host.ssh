@@ -1,4 +1,6 @@
 #!/bin/bash
-ssh-keygen -t rsa -b 4096
-ssh-copy-id vagrant@192.168.56.104
+<<EOF
+ssh-copy-id vagrant@vmHost2
+
 vagrant
+EOF
