@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        image: bluhd823/tp-div_313_grupo_paiva
+        ports: 
+            - "8081:80"
+        volumes:
+            - docker pull bluhd823/tp-div_313_grupo_paiva
+      
