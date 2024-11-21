@@ -14,7 +14,11 @@
      state: touch
      mode: "0644"
 
-
+ - name: "Crear txt con plantilla "
+   ansible.builtin.template:
+      src: "../templates/template_01.j2"
+      dest: "/tmp/Grupo/datos.txt"
+      
 
 
 
