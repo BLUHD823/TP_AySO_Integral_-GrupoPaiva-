@@ -11,7 +11,8 @@
   tasks:
     - include_role:
         name: TP_INI
-    
+        name: Alta_Usuarios_GrupoPaiva
+
     - name: "Otra tarea"
       debug:
         msg: "Despues de la ejecucion del rol"

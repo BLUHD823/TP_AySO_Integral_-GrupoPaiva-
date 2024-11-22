@@ -281,3 +281,202 @@ The offending line appears to be:
 2024-11-21 20:55:46,763 p=2797 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
 2024-11-21 20:55:46,763 p=2797 u=vagrant n=ansible | localhost                  : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-11-21 20:55:46,763 p=2797 u=vagrant n=ansible | vmHost2                    : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:17:56,937 p=3202 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:17:56,964 p=3202 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:17:56,972 p=3202 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:17:57,950 p=3202 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:17:58,466 p=3202 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:17:58,476 p=3202 u=vagrant n=ansible | TASK [include_role : /Alta_Usuarios_GrupoPaiva] *******************************************************************************************************************************************************************************************************************************
+2024-11-21 23:17:58,511 p=3202 u=vagrant n=ansible | ERROR! the role '/Alta_Usuarios_GrupoPaiva' was not found in /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/roles:/tmp:/home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-:/home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible
+
+The error appears to be in '/home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml': line 14, column 15, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        name: TP_INI
+        name: /Alta_Usuarios_GrupoPaiva
+              ^ here
+
+2024-11-21 23:17:58,512 p=3202 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:17:58,513 p=3202 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:17:58,513 p=3202 u=vagrant n=ansible | vmHost2                    : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:18:27,279 p=3313 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:18:27,302 p=3313 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:18:27,309 p=3313 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:18:28,193 p=3313 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:18:28,527 p=3313 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:18:28,536 p=3313 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:18:28,576 p=3313 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:18:29,030 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:18:29,182 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:18:29,224 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:18:29,367 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:18:29,539 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:18:29,710 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:18:29,724 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:18:29,922 p=3313 u=vagrant n=ansible | failed: [localhost] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:18:30,170 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:18:30,581 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:18:31,001 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:18:31,400 p=3313 u=vagrant n=ansible | failed: [vmHost2] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:18:31,401 p=3313 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:18:31,402 p=3313 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:18:31,402 p=3313 u=vagrant n=ansible | vmHost2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:33:33,847 p=3634 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:33:33,869 p=3634 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:33:33,877 p=3634 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:33:34,736 p=3634 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:33:35,288 p=3634 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:33:35,298 p=3634 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:33:35,337 p=3634 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:33:35,672 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:33:35,828 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:33:35,878 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:33:36,010 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:33:36,179 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:33:36,332 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:33:36,369 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:33:36,514 p=3634 u=vagrant n=ansible | failed: [localhost] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:33:36,798 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:33:37,196 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:33:37,598 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:33:37,997 p=3634 u=vagrant n=ansible | failed: [vmHost2] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:33:37,999 p=3634 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:33:37,999 p=3634 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:33:37,999 p=3634 u=vagrant n=ansible | vmHost2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:37:08,813 p=4101 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:37:08,836 p=4101 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:37:08,845 p=4101 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:37:09,716 p=4101 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:37:10,249 p=4101 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:37:10,259 p=4101 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:37:10,301 p=4101 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:37:10,647 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:37:10,810 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:37:10,862 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R1"}
+2024-11-21 23:37:10,999 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:37:11,174 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:37:11,337 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R2"}
+2024-11-21 23:37:11,347 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:37:11,534 p=4101 u=vagrant n=ansible | failed: [localhost] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:37:11,784 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R3"}
+2024-11-21 23:37:12,182 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R4"}
+2024-11-21 23:37:12,578 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R5"}
+2024-11-21 23:37:12,972 p=4101 u=vagrant n=ansible | failed: [vmHost2] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "groupadd: Permission denied.\ngroupadd: cannot lock /etc/group; try again later.\n", "name": "G_R6"}
+2024-11-21 23:37:12,973 p=4101 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:37:12,973 p=4101 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:37:12,974 p=4101 u=vagrant n=ansible | vmHost2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:39:51,848 p=4423 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:39:51,871 p=4423 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:39:51,880 p=4423 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:39:52,743 p=4423 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:39:53,284 p=4423 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:39:53,292 p=4423 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:39:53,333 p=4423 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:39:53,669 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:53,825 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:53,890 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R1) => {"ansible_loop_var": "item", "changed": false, "item": "G_R1", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,020 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,203 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,356 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,369 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R2) => {"ansible_loop_var": "item", "changed": false, "item": "G_R2", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,540 p=4423 u=vagrant n=ansible | failed: [localhost] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:54,806 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R3) => {"ansible_loop_var": "item", "changed": false, "item": "G_R3", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:55,219 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R4) => {"ansible_loop_var": "item", "changed": false, "item": "G_R4", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:55,606 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R5) => {"ansible_loop_var": "item", "changed": false, "item": "G_R5", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:55,996 p=4423 u=vagrant n=ansible | failed: [vmHost2] (item=G_R6) => {"ansible_loop_var": "item", "changed": false, "item": "G_R6", "msg": "Unsupported parameters for (ansible.builtin.group) module: become Supported parameters include: gid, local, name, non_unique, state, system"}
+2024-11-21 23:39:56,000 p=4423 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:39:56,000 p=4423 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:39:56,000 p=4423 u=vagrant n=ansible | vmHost2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:58:24,805 p=4734 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-21 23:58:24,828 p=4734 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:24,836 p=4734 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:25,724 p=4734 u=vagrant n=ansible | ok: [localhost]
+2024-11-21 23:58:26,222 p=4734 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-21 23:58:26,231 p=4734 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:26,272 p=4734 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:26,630 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R1)
+2024-11-21 23:58:26,796 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R2)
+2024-11-21 23:58:26,959 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R3)
+2024-11-21 23:58:27,121 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R4)
+2024-11-21 23:58:27,292 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R1)
+2024-11-21 23:58:27,311 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R5)
+2024-11-21 23:58:27,524 p=4734 u=vagrant n=ansible | changed: [localhost] => (item=G_R6)
+2024-11-21 23:58:27,813 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R2)
+2024-11-21 23:58:28,268 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R3)
+2024-11-21 23:58:28,732 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R4)
+2024-11-21 23:58:29,187 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R5)
+2024-11-21 23:58:29,651 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item=G_R6)
+2024-11-21 23:58:29,657 p=4734 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear usuarios y asignarlos a grupos] ********************************************************************************************************************************************************************************************************
+2024-11-21 23:58:30,163 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R1_AlejoPaiva', 'groups': 'G_R1'})
+2024-11-21 23:58:30,364 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R2_AlejoPaiva', 'groups': 'G_R3'})
+2024-11-21 23:58:30,556 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R1_AlejoPaiva', 'groups': 'G_R1'})
+2024-11-21 23:58:30,591 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R3_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-21 23:58:30,848 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R4_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-21 23:58:31,052 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R5_AlejoPaiva', 'groups': 'G_R5'})
+2024-11-21 23:58:31,200 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R2_AlejoPaiva', 'groups': 'G_R3'})
+2024-11-21 23:58:31,303 p=4734 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R6_AlejoPaiva', 'groups': 'G_R6'})
+2024-11-21 23:58:31,797 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R3_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-21 23:58:32,373 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R4_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-21 23:58:32,899 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R5_AlejoPaiva', 'groups': 'G_R5'})
+2024-11-21 23:58:33,425 p=4734 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R6_AlejoPaiva', 'groups': 'G_R6'})
+2024-11-21 23:58:33,430 p=4734 u=vagrant n=ansible | TASK [Otra tarea] *************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:33,457 p=4734 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-21 23:58:33,462 p=4734 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-21 23:58:33,471 p=4734 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-21 23:58:33,471 p=4734 u=vagrant n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-21 23:58:33,471 p=4734 u=vagrant n=ansible | vmHost2                    : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-22 00:18:34,339 p=5439 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/repogit/TP_AySO_Integral_-GrupoPaiva-/ansible/playbook.yml, line 13, column 9, found a duplicate dict key (name). Using last defined value only.
+
+2024-11-22 00:18:34,363 p=5439 u=vagrant n=ansible | PLAY [testing,produccion] *****************************************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:34,372 p=5439 u=vagrant n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:35,265 p=5439 u=vagrant n=ansible | ok: [localhost]
+2024-11-22 00:18:35,814 p=5439 u=vagrant n=ansible | ok: [vmHost2]
+2024-11-22 00:18:35,824 p=5439 u=vagrant n=ansible | TASK [include_role : Alta_Usuarios_GrupoPaiva] ********************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:35,868 p=5439 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear Grupos] ********************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:36,222 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R1)
+2024-11-22 00:18:36,388 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R2)
+2024-11-22 00:18:36,442 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R1)
+2024-11-22 00:18:36,582 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R3)
+2024-11-22 00:18:36,758 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R4)
+2024-11-22 00:18:36,921 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R2)
+2024-11-22 00:18:36,941 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R5)
+2024-11-22 00:18:37,127 p=5439 u=vagrant n=ansible | ok: [localhost] => (item=G_R6)
+2024-11-22 00:18:37,362 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R3)
+2024-11-22 00:18:37,786 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R4)
+2024-11-22 00:18:38,198 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R5)
+2024-11-22 00:18:38,600 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item=G_R6)
+2024-11-22 00:18:38,606 p=5439 u=vagrant n=ansible | TASK [Alta_Usuarios_GrupoPaiva : Crear usuarios y asignarlos a grupos] ********************************************************************************************************************************************************************************************************
+2024-11-22 00:18:39,002 p=5439 u=vagrant n=ansible | ok: [localhost] => (item={'name': 'R1_AlejoPaiva', 'groups': 'G_R1'})
+2024-11-22 00:18:39,204 p=5439 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R2_AlejoPaiva', 'groups': 'G_R2'})
+2024-11-22 00:18:39,240 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item={'name': 'R1_AlejoPaiva', 'groups': 'G_R1'})
+2024-11-22 00:18:39,454 p=5439 u=vagrant n=ansible | changed: [localhost] => (item={'name': 'R3_AlejoPaiva', 'groups': 'G_R3'})
+2024-11-22 00:18:39,650 p=5439 u=vagrant n=ansible | ok: [localhost] => (item={'name': 'R4_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-22 00:18:39,832 p=5439 u=vagrant n=ansible | ok: [localhost] => (item={'name': 'R5_AlejoPaiva', 'groups': 'G_R5'})
+2024-11-22 00:18:39,887 p=5439 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R2_AlejoPaiva', 'groups': 'G_R2'})
+2024-11-22 00:18:40,065 p=5439 u=vagrant n=ansible | ok: [localhost] => (item={'name': 'R6_AlejoPaiva', 'groups': 'G_R6'})
+2024-11-22 00:18:40,449 p=5439 u=vagrant n=ansible | changed: [vmHost2] => (item={'name': 'R3_AlejoPaiva', 'groups': 'G_R3'})
+2024-11-22 00:18:40,896 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item={'name': 'R4_AlejoPaiva', 'groups': 'G_R4'})
+2024-11-22 00:18:41,338 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item={'name': 'R5_AlejoPaiva', 'groups': 'G_R5'})
+2024-11-22 00:18:41,774 p=5439 u=vagrant n=ansible | ok: [vmHost2] => (item={'name': 'R6_AlejoPaiva', 'groups': 'G_R6'})
+2024-11-22 00:18:41,780 p=5439 u=vagrant n=ansible | TASK [Otra tarea] *************************************************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:41,806 p=5439 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-22 00:18:41,809 p=5439 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-22 00:18:41,820 p=5439 u=vagrant n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-22 00:18:41,820 p=5439 u=vagrant n=ansible | localhost                  : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-22 00:18:41,821 p=5439 u=vagrant n=ansible | vmHost2                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
