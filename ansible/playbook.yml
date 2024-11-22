@@ -12,7 +12,7 @@
     - include_role:
         name: TP_INI
         name: Alta_Usuarios_GrupoPaiva
-
+        name: Sudoers_Grupos
     - name: "Otra tarea"
       debug:
         msg: "Despues de la ejecucion del rol"
