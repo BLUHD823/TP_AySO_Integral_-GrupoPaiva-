@@ -1,6 +1,7 @@
 #!/bin/bash
-<<EOF
-ssh-copy-id vagrant@vmHost2
 
-vagrant
-EOF
+#Cruza las claves con el otro equipo asignado en etc/hosts
+
+sudo apt install sshpass
+sshpass -p "vagrant" ssh-copy-id vagrant@vmHost2
+
